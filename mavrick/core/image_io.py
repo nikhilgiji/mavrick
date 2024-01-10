@@ -1,26 +1,44 @@
 import matplotlib.pyplot as plt
 import jax.numpy as jnp
 
-class ImageProcessor:
+class ImageProcessor: 
     @staticmethod
     def decode_image_grayscale(image_bytes, width, height):
-        # Decode raw grayscale image bytes (example implementation)
-        image_size = width * height
-        image_array = [image_bytes[i] for i in range(image_size)]
-        return image_array
+        try:
+            image_array = jnp.array(image_bytes).reshape((height, width))
+            return image_array
+        except Exception as e:
+            print(f"Error decoding grayscale image: {e}")
+            return None
 
     @staticmethod
     def decode_image_rgb(image_bytes, width, height):
         try:
-            # Assuming the image_bytes represent RGB pixel values (3 bytes per pixel: R, G, B)
             image_array = jnp.array(image_bytes).reshape((height, width, 3))
-            red_channel = image_array[:, :, 0]
-            green_channel = image_array[:, :, 1]
-            blue_channel = image_array[:, :, 2]
-            return red_channel, green_channel, blue_channel
+            return image_array
         except Exception as e:
             print(f"Error decoding RGB image: {e}")
             return None
+        
+    # @staticmethod
+    # def decode_image_grayscale(image_bytes, width, height):
+    #     # Decode raw grayscale image bytes (example implementation)
+    #     image_size = width * height
+    #     image_array = [image_bytes[i] for i in range(image_size)]
+    #     return image_array
+
+    # @staticmethod
+    # def decode_image_rgb(image_bytes, width, height):
+    #     try:
+    #         # Assuming the image_bytes represent RGB pixel values (3 bytes per pixel: R, G, B)
+    #         image_array = jnp.array(image_bytes).reshape((height, width, 3))
+    #         red_channel = image_array[:, :, 0]
+    #         green_channel = image_array[:, :, 1]
+    #         blue_channel = image_array[:, :, 2]
+    #         return red_channel, green_channel, blue_channel
+    #     except Exception as e:
+    #         print(f"Error decoding RGB image: {e}")
+    #         return None
 
     @staticmethod
     def imread(file_path, color='rgb'):
