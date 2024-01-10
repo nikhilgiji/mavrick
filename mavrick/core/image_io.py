@@ -11,14 +11,16 @@ class ImageProcessor:
 
     @staticmethod
     def decode_image_rgb(image_bytes, width, height):
-        # Decode raw RGB image bytes (example implementation)
-        # Process bytes to extract RGB channels accordingly
-        # Replace this logic with the appropriate decoding algorithm
-        # This is a placeholder to illustrate the concept
-        red_channel = [image_bytes[i] for i in range(0, len(image_bytes), 3)]
-        green_channel = [image_bytes[i] for i in range(1, len(image_bytes), 3)]
-        blue_channel = [image_bytes[i] for i in range(2, len(image_bytes), 3)]
-        return red_channel, green_channel, blue_channel
+        try:
+            # Assuming the image_bytes represent RGB pixel values (3 bytes per pixel: R, G, B)
+            image_array = jnp.array(image_bytes).reshape((height, width, 3))
+            red_channel = image_array[:, :, 0]
+            green_channel = image_array[:, :, 1]
+            blue_channel = image_array[:, :, 2]
+            return red_channel, green_channel, blue_channel
+        except Exception as e:
+            print(f"Error decoding RGB image: {e}")
+            return None
 
     @staticmethod
     def imread(file_path, color='rgb'):
