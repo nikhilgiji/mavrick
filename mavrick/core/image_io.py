@@ -2,6 +2,28 @@ import matplotlib.pyplot as plt
 import jax.numpy as jnp
 
 class ImageProcessor: 
+    # @staticmethod
+    # def decode_image_grayscale(image_bytes, width, height):
+    #     try:
+    #         image_array = jnp.array(image_bytes).reshape((height, width))
+    #         return image_array
+    #     except Exception as e:
+    #         print(f"Error decoding grayscale image: {e}")
+    #         return None
+
+    # @staticmethod
+    # def decode_image_rgb(image_bytes, width, height):
+    #     try:
+    #         expected_size = width * height * 3  # RGB channels (3 bytes per pixel)
+    #         if len(image_bytes) != expected_size:
+    #             raise ValueError("Invalid image bytes size for RGB image")
+
+    #         image_array = jnp.array(image_bytes).reshape((height, width, 3))
+    #         return image_array
+    #     except Exception as e:
+    #         print(f"Error decoding RGB image: {e}")
+    #         return None
+        
     @staticmethod
     def decode_image_grayscale(image_bytes, width, height):
         try:
