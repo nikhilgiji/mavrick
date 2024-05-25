@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+mavrick/__init__.py
+mavrick.egg-info/PKG-INFO
+mavrick.egg-info/SOURCES.txt
+mavrick.egg-info/dependency_links.txt
+mavrick.egg-info/requires.txt
+mavrick.egg-info/top_level.txt
+mavrick/core/__init__.py
+mavrick/core/image_io.py
+mavrick/filters/__init__.py
+mavrick/tests/__init__.py
+mavrick/tests/test_image_io.py
+mavrick/utils/__init__.py

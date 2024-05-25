@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mavrick
+Version: 0.1.0
+Summary: A Python image processing library using JAX
+Home-page: https://github.com/nikhilgiji/mavrick
+Author: Nikhil Francis Giji
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: numpy
+Requires-Dist: Pillow
