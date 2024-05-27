@@ -10,7 +10,7 @@ def gaussian_kernel(size, sigma):
     kernel /= jnp.sum(kernel)
     return kernel
 
-def apply_gaussian_filter(image, size=5, sigma=1.0):
+def gaussian_filter(image, size=5, sigma=1.0):
     """Applies a Gaussian filter to an image using JAX for computations."""
     kernel = gaussian_kernel(size, sigma)
     if image.ndim == 2:  # Grayscale image
@@ -22,4 +22,4 @@ def apply_gaussian_filter(image, size=5, sigma=1.0):
         raise ValueError("Unsupported image dimensions.")
 
 # JIT-compile the main function with size and sigma as static arguments
-apply_gaussian_filter = jit(apply_gaussian_filter, static_argnums=(1, 2))
+gaussian_filter = jit(gaussian_filter, static_argnums=(1, 2))

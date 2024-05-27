@@ -2,7 +2,7 @@
 import jax.numpy as jnp
 from jax import jit
 from jax.scipy.signal import convolve2d 
-from .gaussian_filter import apply_gaussian_filter
+from .gaussian_filter import gaussian_filter
 
 
 @jit
