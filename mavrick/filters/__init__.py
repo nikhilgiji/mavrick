@@ -1,7 +1,9 @@
 # mavrick/filters/__init__.py
 import jax.numpy as jnp
 from jax import jit
-from jax.scipy.signal import convolve2d
+from jax.scipy.signal import convolve2d 
+from .gaussian_filter import apply_gaussian_filter
+
 
 @jit
 def apply_filter(image, filter_matrix):
