@@ -23,3 +23,5 @@ def gaussian_filter(image, size=5, sigma=1.0):
 
 # JIT-compile the main function with size and sigma as static arguments
 gaussian_filter = jit(gaussian_filter, static_argnums=(1, 2))
+
+# You can define other filters here in a similar manner
