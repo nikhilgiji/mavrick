@@ -2,6 +2,14 @@ import jax.numpy as jnp
 from jax import jit
 from jax.scipy.signal import convolve2d
 
+
+def grayscale_filter(image):
+    """Converts an RGB image to grayscale."""
+    return jnp.dot(image[..., :3], jnp.array([0.2989, 0.5870, 0.1140]))
+
+# JIT-compile the function
+grayscale_filter = jit(grayscale_filter)
+
 def gaussian_kernel(size, sigma):
     """Generates a Gaussian kernel."""
     x = jnp.linspace(-size // 2, size // 2, size)
@@ -24,4 +32,4 @@ def gaussian_filter(image, size=5, sigma=1.0):
 # JIT-compile the main function with size and sigma as static arguments
 gaussian_filter = jit(gaussian_filter, static_argnums=(1, 2))
 
-# You can define other filters here in a similar manner
+
