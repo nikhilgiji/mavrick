@@ -26,7 +26,21 @@ Mavrick is an image processing library built on JAX, designed to provide efficie
 
 ## Installation
 
-As Mavrick is in development, it's not yet available for installation via `pip`. Stay tuned for updates on its release and installation instructions.
+**Note:** *As Mavrick is in development, it's not yet available for installation via `pip`. Stay tuned for updates on its release and installation instructions.*
+
+#### Clone the repository:
+
+```sh
+git clone https://github.com/yourusername/mavrick.git
+```
+
+#### Run the setup script:
+
+```sh
+./setup.sh
+```
+
+This script will change the directory to mavrick, set the PYTHONPATH, and install the package in editable mode.
 
 ## Usage
 
@@ -72,14 +86,12 @@ To set up a development environment for Mavrick, follow these steps:
 #### Clone the repository:
 
 ```sh
-Copy code
 git clone https://github.com/yourusername/mavrick.git
 ```
 
 #### Run the setup script:
 
 ```sh
-Copy code
 ./setup.sh
 ```
 
@@ -94,7 +106,12 @@ Improve documentation and add comprehensive tutorials.
 Prepare for the first official release.
 
 ## License
-Mavrick is licensed under the MIT License. See the LICENSE file for more details.
+
+Mavrick is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
+---
+
+(C) 2024 Nikhil Francis Giji
 
 ## Acknowledgments
 We would like to thank the JAX team and the open-source community for their invaluable contributions and support.
