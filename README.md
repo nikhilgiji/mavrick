@@ -69,21 +69,20 @@ We welcome contributions to Mavrick. If you're interested in contributing, pleas
 ## Development Setup
 To set up a development environment for Mavrick, follow these steps:
 
-### Clone the repository:
+#### Clone the repository:
 
-sh
+```sh
 Copy code
 git clone https://github.com/yourusername/mavrick.git
-Navigate to the project directory:
+```
 
-sh
-Copy code
-cd mavrick
-Run the setup script:
+#### Run the setup script:
 
-sh
+```sh
 Copy code
 ./setup.sh
+```
+
 This script will change the directory to mavrick, set the PYTHONPATH, and install the package in editable mode.
 
 ## Roadmap
