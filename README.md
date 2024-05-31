@@ -108,10 +108,10 @@ Prepare for the first official release.
 
 Mavrick is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
+## Acknowledgments
+
+We would like to thank the [JAX team](https://github.com/google/jax) and the open-source community for their invaluable contributions and support. 
+
 ---
 
 (C) 2024 Nikhil Francis Giji
-
-## Acknowledgments
-
-We would like to thank the [JAX team](https://github.com/google/jax) and the open-source community for their invaluable contributions and support.
