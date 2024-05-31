@@ -11,7 +11,6 @@ mavrick/core/__init__.py
 mavrick/core/image_io.py
 mavrick/filters/__init__.py
 mavrick/filters/filters.py
-mavrick/filters/gaussian_filter.py
 mavrick/tests/__init__.py
 mavrick/tests/test_image_io.py
 mavrick/utils/__init__.py

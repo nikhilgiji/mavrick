@@ -30,6 +30,13 @@ def gaussian_filter(image, size=5, sigma=1.0):
         raise ValueError("Unsupported image dimensions.")
 
 # JIT-compile the main function with size and sigma as static arguments
-gaussian_filter = jit(gaussian_filter, static_argnums=(1, 2))
+gaussian_filter = jit(gaussian_filter, static_argnums=(1, 2)) 
+
+def brightness_filter(image, factor):
+    """Adjusts the brightness of an image by scaling pixel values."""
+    return jnp.clip(image * factor, 0, 255)
+
+# JIT-compile the function
+brightness_filter = jit(brightness_filter, static_argnums=(1,))
 
 
