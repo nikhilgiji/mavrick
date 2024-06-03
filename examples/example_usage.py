@@ -15,3 +15,9 @@ bright_image = mv.brightness_filter(image, factor=1.5)
 
 # Save the brightened image
 mv.save_image(bright_image, '../mavrick/resources/sample_images/bright_test.jpg')
+
+# Apply the Contrast filter to the image
+contrast_image = mv.contrast_filter(image, factor=1.5)
+
+# Save the contrast-adjusted image
+mv.save_image(contrast_image, '../mavrick/resources/sample_images/contrast_test.jpg')

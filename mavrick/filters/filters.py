@@ -39,4 +39,19 @@ def brightness_filter(image, factor):
 # JIT-compile the function
 brightness_filter = jit(brightness_filter, static_argnums=(1,))
 
+def contrast_filter(image, factor):
+    """
+    Adjusts the contrast of an image.
+
+    Parameters:
+    image (jnp.ndarray): Input image.
+    factor (float): Contrast adjustment factor. 
+                    1.0 means no change, less than 1.0 reduces contrast,
+                    greater than 1.0 increases contrast.
+
+    Returns:
+    jnp.ndarray: Image with adjusted contrast.
+    """
+    mean = jnp.mean(image, axis=(0, 1), keepdims=True)
+    return jnp.clip((image - mean) * factor + mean, 0, 255)
 
