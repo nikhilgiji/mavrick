@@ -51,7 +51,7 @@ def contrast_filter(image, factor):
 
     Returns:
     jnp.ndarray: Image with adjusted contrast.
-    """
+    """ 
     mean = jnp.mean(image, axis=(0, 1), keepdims=True)
     return jnp.clip((image - mean) * factor + mean, 0, 255)
 
