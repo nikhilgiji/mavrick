@@ -33,7 +33,18 @@ def gaussian_filter(image, size=5, sigma=1.0):
 gaussian_filter = jit(gaussian_filter, static_argnums=(1, 2)) 
 
 def brightness_filter(image, factor):
-    """Adjusts the brightness of an image by scaling pixel values."""
+    """
+    Adjusts the brightness of an image.
+
+    Parameters:
+    image (jnp.ndarray): Input image.
+    factor (float): Contrast adjustment factor. 
+                    1.0 means no change, less than 1.0 reduces brightness,
+                    greater than 1.0 increases brightness.
+
+    Returns:
+    jnp.ndarray: Image with adjusted contrast.
+    """ 
     return jnp.clip(image * factor, 0, 255)
 
 # JIT-compile the function
