@@ -5,7 +5,7 @@ setup(
     version="0.1.0",
     description="A Python image processing library using JAX",
     author="Nikhil Francis Giji",
-    author_email="your.email@example.com",
+    author_email="nikhilfrancisgiji@gmail.com",
     url="https://github.com/nikhilgiji/mavrick",
     packages=find_packages(),
     install_requires=[
