@@ -4,7 +4,7 @@ Version: 0.1.0
 Summary: A Python image processing library using JAX
 Home-page: https://github.com/nikhilgiji/mavrick
 Author: Nikhil Francis Giji
-Author-email: your.email@example.com
+Author-email: nikhilfrancisgiji@gmail.com
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
