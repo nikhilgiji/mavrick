@@ -37,3 +37,6 @@ def rotate_image(image, angle):
     pil_image = Image.fromarray(np.uint8(image))
     rotated_image = pil_image.rotate(angle)
     return jnp.array(rotated_image)
+
+@jit 
+def flip_horizonal(image)
