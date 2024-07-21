@@ -3,6 +3,7 @@ from jax import jit
 from jax.scipy.signal import convolve2d
 
 
+@jit
 def grayscale_filter(image):
     """Converts an RGB image to grayscale."""
     return jnp.dot(image[..., :3], jnp.array([0.2989, 0.5870, 0.1140]))
@@ -10,6 +11,7 @@ def grayscale_filter(image):
 # JIT-compile the function
 grayscale_filter = jit(grayscale_filter)
 
+@jit
 def gaussian_kernel(size, sigma):
     """Generates a Gaussian kernel."""
     x = jnp.linspace(-size // 2, size // 2, size)
@@ -18,6 +20,7 @@ def gaussian_kernel(size, sigma):
     kernel /= jnp.sum(kernel)
     return kernel
 
+@jit
 def gaussian_filter(image, size=5, sigma=1.0):
     """Applies a Gaussian filter to an image using JAX for computations."""
     kernel = gaussian_kernel(size, sigma)
@@ -32,6 +35,7 @@ def gaussian_filter(image, size=5, sigma=1.0):
 # JIT-compile the main function with size and sigma as static arguments
 gaussian_filter = jit(gaussian_filter, static_argnums=(1, 2)) 
 
+@jit
 def brightness_filter(image, factor):
     """
     Adjusts the brightness of an image.
@@ -50,6 +54,7 @@ def brightness_filter(image, factor):
 # JIT-compile the brightness filter function
 brightness_filter = jit(brightness_filter, static_argnums=(1,))
 
+@jit
 def contrast_filter(image, factor):
     """
     Adjusts the contrast of an image.

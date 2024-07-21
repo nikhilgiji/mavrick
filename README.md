@@ -1,6 +1,6 @@
-# Mavrick
+# Mavrick: Accelerating Image Processing
 
-Mavrick is an image processing library built on JAX, designed to provide efficient and scalable image processing capabilities.
+Mavrick is an image processing library built on JAX, designed to provide efficient and scalable image processing capabilities on CPU and GPU.
 
 **Note:** *Mavrick is currently in active development and most features are still in development.*
 
@@ -115,3 +115,4 @@ We would like to thank the [JAX team](https://github.com/google/jax) and the ope
 ---
 
 (C) 2024 Nikhil Francis Giji
+
