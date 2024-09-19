@@ -22,14 +22,17 @@ contrast_image = mv.contrast_filter(image, factor=1.5)
 # Save the contrast-adjusted image
 mv.save_image(contrast_image, '../mavrick/resources/sample_images/contrast_test.jpg')
 
-# Resize the image
-resized_image = mv.resize_image(image, (200, 200))
-mv.save_image(resized_image, '../mavrick/resources/sample_images/resized_test.jpg')
+# # Resize the image
+# resized_image = mv.resize_image(image, (200, 200))
+# mv.save_image(resized_image, '../mavrick/resources/sample_images/resized_test.jpg')
 
-# Crop the image
-cropped_image = mv.crop_image(image, top=50, left=50, height=100, width=100)
-mv.save_image(cropped_image, '../mavrick/resources/sample_images/cropped_test.jpg')
+# # Crop the image
+# cropped_image = mv.crop_image(image, top=50, left=50, height=100, width=100)
+# mv.save_image(cropped_image, '../mavrick/resources/sample_images/cropped_test.jpg')
 
-# Rotate the image
-rotated_image = mv.rotate_image(image, angle=45)
-mv.save_image(rotated_image, '../mavrick/resources/sample_images/rotated_test.jpg')
+# # Rotate the image
+# rotated_image = mv.rotate_image(image, angle=45)
+# mv.save_image(rotated_image, '../mavrick/resources/sample_images/rotated_test.jpg')
+# Apply the Gaussian filter to the image
+gaussian_image = mv.gaussian_filter(image, size=5, sigma=1.0)
+mv.save_image(gaussian_image, '../mavrick/resources/sample_images/gaussian_test.jpg')

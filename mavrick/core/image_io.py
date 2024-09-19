@@ -17,12 +17,25 @@ def save_image(image_array, path):
     image = Image.fromarray(image_array.astype(np.uint8))
     image.save(path)
 
-@jit
-def resize_image(image, new_size):
-    """Resizes an image to the specified size (width, height)."""
+# @jit
+# def resize_image(image, new_size):
+#     """Resizes an image to the specified size (width, height)."""
+#     pil_image = Image.fromarray(np.uint8(image))
+#     resized_image = pil_image.resize(new_size, Image.ANTIALIAS)
+#     return jnp.array(resized_image)
+
+def resize_image_pil(image, new_size):
+    """Resize an image using PIL."""
+    # Convert JAX array to NumPy array for PIL
     pil_image = Image.fromarray(np.uint8(image))
     resized_image = pil_image.resize(new_size, Image.ANTIALIAS)
     return jnp.array(resized_image)
+
+@jit
+def resize_image(image, new_size):
+    """Resizes an image to the specified size (width, height)."""
+    # Perform resizing operation using the non-JIT wrapper
+    return resize_image_pil(image, new_size)
 
 @jit
 def crop_image(image, top, left, height, width):
