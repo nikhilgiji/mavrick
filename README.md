@@ -37,7 +37,7 @@ git clone https://github.com/yourusername/mavrick.git
 #### Run the setup script:
 
 ```sh
-./setup.sh
+./setup.py
 ```
 
 This script will change the directory to mavrick, set the PYTHONPATH, and install the package in editable mode.
