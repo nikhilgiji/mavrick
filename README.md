@@ -42,6 +42,8 @@ git clone https://github.com/yourusername/mavrick.git
 
 This script will change the directory to mavrick, set the PYTHONPATH, and install the package in editable mode.
 
+**Note:** *Sometimes Environment Variable needs to be addded to PYTHONPATH*
+
 ## Usage
 
 Once available, Mavrick will offer a user-friendly interface for various image processing tasks.
