@@ -71,3 +71,6 @@ def contrast_filter(image, factor):
     mean = jnp.mean(image, axis=(0, 1), keepdims=True)
     return jnp.clip((image - mean) * factor + mean, 0, 255)
 
+#@jit 
+#def binary_filtere(image, factor:
+                   )
